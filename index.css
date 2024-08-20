@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Rubik;
+}
+
+body {
+    background-image: linear-gradient(to right,  rgb(74, 111, 133), rgb(13, 57, 151));
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 500px;
+    gap: 12px;
+    margin: 40px 30px;
+}
+
+#formulario {
+    border: 1px solid transparent;
+    border-radius: 10px 0 0 10px;
+    background-color: azure
+}
+
+label {
+    font-size: 1.3em;
+}
+#parcial {
+    border: 1px solid  transparent;
+    border-radius: 0 10px 10px 0;
+    background-color: azure;
+}
+
+#formulario h2 {
+    text-align: center; 
+    margin: 40px auto;
+    font-size: 2.5rem;
+    width: 50%;
+}
+
+
+form div {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 8px;
+    padding: 20px 40px;
+}
+
+input {
+  height: 34px;
+  border-radius: 4px;
+}
+
+select {
+    height: 34px;
+    border-radius: 4px;
+    background-color: white;
+    color: rgb(129, 128, 128);
+    cursor: pointer;
+  }
+
+button {
+    width: 66%;
+    height: 34px;
+    border-radius: 4px;
+    background-color: rgb(13, 65, 65);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.4s ease;
+}
+
+button:hover{
+    background-color: rgb(28, 97, 97);
+    color: rgb(240, 230, 230);
+    transform: scale(1.02);
+}
+
+.clima {
+   margin: 30px auto;
+   padding: 20px 4px 20px 92px;
+}
+
+#parcial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#parcial section:first-child {
+    margin: 70px auto;
+    height: auto;
+}
+
+#parcial section:first-child h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#parcial section:first-child p {
+    text-align: center;
+    font-size: 1.7rem;
+   
+}
+
+#parcial section:first-child h3 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+#parcial section:first-child div {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+#parcial section:first-child div span {
+    text-align: center;
+}
+
+#parcial section:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 70px;
+}
+
+#parcial section div {
+    margin: 0 auto;
+}
+
+.temperaturas div {
+    width: 130px;
+    height: 120px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+/* mostrar error*/
+
+.error {
+    width: 300px;
+    height: 70px;
+    color: black;
+    border-radius: 6px;
+    transition: ease-in-out 5s ;
+    margin: 16px auto;
+}
+
+/* imagen del clima */
+
+#weather {
+    width: 150px;
+    height: 150px;
+}
+
+/* Spinner de carga */
+.spinner {
+    border: 8px solid rgba(102, 89, 89, 0.1); /* Color del borde exterior */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-left-color: rgb(74, 159, 180); /* Color del spinner */
+  
+    animation: spin 1s ease-in-out infinite; /* Animación */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+  /* Darkmode */
+.darknigth {
+    background-color: rgb(17, 13, 68); 
+    color: rgb(247, 241, 241);
+}
+
+
+/* Adaptable */
+@media(width < 800px) {
+    .container{
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+        margin: 30px 15px;
+    } 
+}
+
+@media(width < 760px) {
+    .container{
+        grid-template-columns: 1fr;
+    } 
+
+    #parcial section:last-child {
+        padding-top: 20px;
+    }
+
+    #formulario {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    #parcial {
+        border-radius: 0 0 10px 10px;
+    }
+} 
+
