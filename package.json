@@ -1,13 +1,22 @@
 {
   "name": "weather",
   "version": "1.0.0",
-  "type": "module",
-  "description": "",
-  "main": "index.js",
+  "description": "App de clima",
+  "main": "index.mjs",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.mjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivangnzlz7/weather.git"
+  },
+  "author": "ivan javier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivangnzlz7/weather/issues"
+  },
+  "homepage": "https://github.com/ivangnzlz7/weather#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
 }

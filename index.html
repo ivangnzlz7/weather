@@ -9,6 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
     <link rel="icon" href="./imgWeather/Vector.svg" type="image/icon">
+    <script>
+        // Required by some npm packages
+        window.process = { browser: true, env: { ENVIRONMENT: 'BROWSER' } };
+    </script>
     <title>Weather</title>
 </head>
 <body>
@@ -64,6 +68,6 @@
         </div>
     </div>
 
-    <script src="./index.js"></script>
+    <script src="./index.mjs" defer></script>
 </body>
 </html>

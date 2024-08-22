@@ -5,6 +5,10 @@ const resultado3 = document.querySelector('.temperaturas div:last-child');
 const dias = document.querySelector('#parcial section div');
 const body = document.querySelector('body');
 
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 var ahora = new Date();
 var diaDeS = ahora.getDay();
 var horas = ahora.getHours();
@@ -18,7 +22,7 @@ const dia = d => {
                         d == 5 ? 'Viernes' :
                             d == 6 ? 'Sabado' :
                                 'Undefined'
-}
+} 
 
 function actualizarHora() {
 
@@ -106,8 +110,7 @@ function aviso(mensaje) {
 }
 
 function consultarApi(ciudad, pais) {
-
-    const appId = '5573836c8af308c0056cd2e5dbd18627';
+    
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`
 
