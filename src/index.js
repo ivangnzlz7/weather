@@ -4,10 +4,7 @@ const resultado2 = document.querySelector('.temperaturas div:first-child');
 const resultado3 = document.querySelector('.temperaturas div:last-child');
 const dias = document.querySelector('#parcial section div');
 const body = document.querySelector('body');
-
-const dotenv = require('dotenv');
-
-dotenv.config();
+const appId = process.env.APP_ID
 
 var ahora = new Date();
 var diaDeS = ahora.getDay();
@@ -73,6 +70,7 @@ function buscarClima(e) {
 
     if ([pais, ciudad].includes('')) {
         aviso('Los campos son obligatorios');
+        console.log(process.env.APP_LOCAL);
         return;
     }
 
@@ -110,7 +108,6 @@ function aviso(mensaje) {
 }
 
 function consultarApi(ciudad, pais) {
-    
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`
 
@@ -137,7 +134,7 @@ const resultWeather = estado => {
             estado === "Clouds" ? '<img src=./imgWeather/cloud-solid.svg alt=nubes id=weather>' :
                 estado === "Thunderstorm" ? '<img src=./imgWeather/poo-storm-solid.svg alt=tormentas id=weather>' :
                     estado === "Drizzle" ? '<img src=./imgWeather/bx-cloud-drizzle.svg alt=lluvioso id=weather>' :
-                        'no se encontro ninguno';
+                        '';
 }
 
 function mostrarClima(datos) {
