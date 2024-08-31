@@ -27,6 +27,10 @@ module.exports = {
                 from: path.resolve(__dirname, 'public'), 
                 to: 'public',  
               },
+              {
+                from: path.resolve(__dirname, 'index.css'), 
+                to: 'index.css',  
+              },
             ],
           }),
     ],
