@@ -24,8 +24,8 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
               {
-                from: path.resolve(__dirname, 'imgWeather'), 
-                to: 'imgWeather',  
+                from: path.resolve(__dirname, 'public'), 
+                to: 'public',  
               },
             ],
           }),

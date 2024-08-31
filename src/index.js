@@ -129,11 +129,11 @@ function consultarApi(ciudad, pais) {
 }
 
 const resultWeather = estado => {
-    return estado === "Clear" ? '<img src=./imgWeather/bxs-sun.svg alt=sol id=weather>' :
-        estado === "Rain" ? '<img src=./imgWeather/cloud-rain-solid.svg alt=lluvia id=weather>' :
-            estado === "Clouds" ? '<img src=./imgWeather/cloud-solid.svg alt=nubes id=weather>' :
-                estado === "Thunderstorm" ? '<img src=./imgWeather/poo-storm-solid.svg alt=tormentas id=weather>' :
-                    estado === "Drizzle" ? '<img src=./imgWeather/bx-cloud-drizzle.svg alt=lluvioso id=weather>' :
+    return estado === "Clear" ? '<img src=public/bxs-sun.svg alt=sol id=weather>' :
+        estado === "Rain" ? '<img src=public/cloud-rain-solid.svg alt=lluvia id=weather>' :
+            estado === "Clouds" ? '<img src=public/cloud-solid.svg alt=nubes id=weather>' :
+                estado === "Thunderstorm" ? '<img src=public/poo-storm-solid.svg alt=tormentas id=weather>' :
+                    estado === "Drizzle" ? '<img src=public/bx-cloud-drizzle.svg alt=lluvioso id=weather>' :
                         '';
 }
 
